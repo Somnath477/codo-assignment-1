@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOB APPLICATION FORM</title>
+</head>
+<body>
+    <h1>JOB APPLICATION FORM</h1>
+    <form name="MyForm" onsubmit="return validateForm()" method="post">
+        <h3>Fields:</h3>
+      <div class="formdesign" id="name">  
+        <strong>Full Name*:</strong> <input type="text" name="fname" placeholder="Full Name"><spam class="formerror"></spam>
+      </div>  
+       <br><br>
+      <div class="formdesign" id="age"> 
+         <strong>Age*:</strong> <input type="number" name="fage" placeholder="Age"><spam class="formerror"></spam>
+      </div>  
+        <br><br>
+      <div class="formdesign" id="gender">
+        <p><strong>Gender:</strong></p>
+        <br>
+        Male <input type="radio" name="fgender">
+        Female <input type="radio" name="fgender">
+        Other <input type="radio" name="fgender">
+      </div>  
+        <br>
+      <div class="formdesign" id="qualification">
+        <p><strong>Qualification:</strong></p><spam class="formerror"></spam>
+        <select name="fQualification"><spam class="formerror"></spam>
+            <option value=""></option>
+            <option value="BSC">BSC</option>
+            <option value="BCA">BCA</option>
+            <option value="B.TECH">B.TECH</option>
+            <option value="MSC">MSC</option>
+            <option value="MCA">MCA</option>
+            <option value="M.TECH">M.TECH</option>
+        </select>
+      </div>  
+      <br><br>
+      <div class="formdesign" id="about">  
+        <strong>About Yourself*:</strong><br> <textarea name="fabout" id="about" cols="30" rows="20" maxlength="250" placeholder="About Yourself"></textarea><spam class="formerror"></spam>
+      </div>  
+      <br><br>
+      <strong>Upload CV:</strong> <input type="file" accept=".doc , .docx , .pdf">
+      <br><br>
+      <input class="but" type="submit" name="Submit" placeholder="Submit" value="submit">
+
+    </form>
+</body>
+
+<script>
+  function alert(id, error){
+      element = document.getElementById(id);
+      element.getElementsByClassName('formerror')[0].innerHTML = error;
+    
+
+    }
+
+    
+
+    function validateForm(){
+      var returnval = true;
+      
+      
+      var name = document.forms['MyForm'] ["fname"].value;
+      if (name.length== 0){
+          alert ("name", "(*)are madatory fields,cannot be left blank")
+          returnval = false;
+      }
+
+      var age = document.forms['MyForm'] ["fage"].value;
+      if (age.length== 0){
+          alert ("age", "(*)are madatory fields,cannot be left blank")
+          returnval = false;    
+      }
+
+    
+
+      var about = document.forms['MyForm'] ["fabout"].value;
+      if (about.length== 0){
+          alert ("about", "(*)are madatory fields,cannot be left blank")
+          returnval = false;
+      }
+
+
+
+
+      return returnval;
+    }
+    
+        
+    
+</script>
+</html>

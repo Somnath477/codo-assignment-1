@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>SHOP</title>
+    <style>
+        table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+              }
+              
+              td, th {
+                border: 1px solid #dddddd;
+                text-align: left;
+                /* padding: 8px; */
+              }
+              
+              tr:nth-child(even) {
+                background-color: #dddddd;
+              }
+              #GrandTotalAmount {
+                  background-color:darkgray ;
+              }
+              #lastblock {
+                background-color: gold;
+                height: 3rem;
+              }
+        </style>
+</head>
+<body>
+  <div class="jumbotron">
+    <div class="row" style="text-align: center; font-size: medium;">
+        <h2 id="nametop"> </h2>
+    </div>
+    <div class="row" style="font-size: medium;">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-2" style="text-align: right">
+          <h4 id="address"> </h4>
+        </div>
+        <div class="col-sm-2" style="text-align: right">
+          <h4> City - </h4>
+        </div>
+        <div class="col-sm-2" style="text-align: left">
+          <h4 id="city">  </h4>
+        </div>
+        <div class="col-sm-2" style="text-align: right">
+          <h4> State - </h4>
+        </div>
+        <div class="col-sm-2" style="text-align: left">
+          <h4 id="state"> </h4>
+        </div>
+    </div>
+    <div class="row" style="font-size: medium;">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-2" style="text-align: right;" >
+        <h4> EMAIL - </h4>
+      </div>
+      <div class="col-sm-2" style="text-align: left;">
+        <h4 id="email"> </h4>
+      </div>
+      <div class="col-sm-2" style="text-align: right;">
+        <h4> CONTACT -</h4>
+      </div>
+      <div class="col-sm-2" style="text-align: left;">
+        <h4 id="contact"></h4>
+      </div>
+    </div>
+    <div class="row" style="text-align: center; font-size: large;">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-2"></div>
+      <div class="col-sm-2">
+        <h4> GST No. - </h4>
+      </div>
+      <div class="col-sm-2">
+        <h4 id="gstnumber"> </h4>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div>
+    <div class="row">
+      <div class="col-sm-6" >
+        <h4><b> Table No. </b></h4>
+      </div>
+      <div class="col-sm-6" id="tableNumber" style="text-align: right;">
+        <h4><b> </b></h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6" >
+        <h4><b> Date-Time </b></h4>
+      </div>
+      <div class="col-sm-6" id="timedate" style="text-align: right;">
+        <h4><b> </b></h4>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div>
+    <table class="table" id="orderItemTable">
+      <!-- select -->
+        <tr style="padding: 1rem; background-color:#c68c53">
+            <td><b> No </b></td>
+            <td><b> Item Name </b></td>            
+            <td><b> Quantity </b></td>
+            <td><b> Price </b></td>
+            <td><b> Amount </b></td>
+        </tr>
+    </table>
+    <div class="row">
+       <div class="h4 col-sm-3 col-md-6 col-lg-4"><b> Subtotal </b></div>
+       <p class="col-sm-9 col-md-6 col-lg-8" id="subtotal" style="text-align: right"> </p>
+    </div>
+    <div class="row"> 
+       <div class="h4 col-sm-3 col-md-6 col-lg-4"><b> Discount </b></div>
+       <p class="col-sm-9 col-md-6 col-lg-8" id="discount" style="text-align: right"> </p> 
+    </div>
+    <div id="GrandTotalAmount">
+      <div class="row" >
+        <div class="h4 col-sm-3 col-md-6 col-lg-4"><b> Grand Total </b></div>
+        <p class="col-sm-9 col-md-6 col-lg-8" id="grandtotal" style="text-align: right"> </p> 
+      </div>
+    </div>
+    <div id="lastblock">
+      <h5 style="text-align: center; font-size: medium;"><b> Thank You </b></h5>
+    </div>
+    <script src="script.js"></script>
+  </div>
+</body>
+</html>
